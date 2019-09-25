@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Palabras</string>
+    <string name="seleccione_dificultad">Seleccione Dificultad</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="dificil">DIFICIL</string>
+    <string name="normal">NORMAL</string>
+    <string name="facil">FACIL</string>
+    <string name="textview">TextView</string>
 </resources>
