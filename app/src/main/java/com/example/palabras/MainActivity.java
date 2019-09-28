@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.Nombre);
 
         button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick( View view){
-                enviar();
-            }
+        @Override
+        public void onClick( View view){
+            enviar();
+        }
 
-        });
-    }
+    });
+}
     public void enviar(){
         Intent i = new Intent(MainActivity.this,activity_2.class);
         i.putExtra("valor",editText.getText().toString());
