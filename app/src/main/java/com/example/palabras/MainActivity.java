@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
-    Button button;
+    Button button,button6;
     EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView2);
         button = (Button) findViewById(R.id.button);
         editText = (EditText) findViewById(R.id.Nombre);
+        button6 = (Button) findViewById(R.id.button6);
 
         button.setOnClickListener(new View.OnClickListener(){
         @Override
@@ -28,7 +29,15 @@ public class MainActivity extends AppCompatActivity {
             enviar();
         }
 
+
     });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,Acerca_de.class);
+                startActivity(i);
+            }
+        });
 }
     public void enviar(){
         Intent i = new Intent(MainActivity.this,activity_2.class);
