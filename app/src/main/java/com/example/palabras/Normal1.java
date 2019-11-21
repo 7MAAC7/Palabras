@@ -2,6 +2,8 @@ package com.example.palabras;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,5 +23,14 @@ public class Normal1 extends AppCompatActivity {
         TN  = (TextView) findViewById(R.id.textView5);
         IN  = (ImageView) findViewById(R.id.imageView2);
         EN  = (EditText) findViewById(R.id.editTextNormal);
+        this.Asignar_adivinanza();
+    }
+    public void Asignar_adivinanza(){
+        Conexion Tabla_normal = new Conexion(this, "Normal", null,1);
+        SQLiteDatabase BD = Tabla_normal.getWritableDatabase();
+        Cursor N = BD.rawQuery("select Adivinanza from Adivinanzas_NORMAL ", null);
+        this.TN.setText(N.getString(0));
+        BD.close();
+        //Problemas para ejecutar el activy, probablemente sea la visualizacion del texview
     }
 }

@@ -19,6 +19,7 @@
 
     <EditText
         android:id="@+id/editTextNormal"
+        android:singleLine="true"
         android:layout_width="136dp"
         android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"

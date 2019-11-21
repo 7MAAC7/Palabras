@@ -43,6 +43,7 @@
 
     <EditText
         android:id="@+id/editTextdificil"
+        android:singleLine="true"
         android:layout_width="124dp"
         android:layout_height="47dp"
         app:layout_constraintBottom_toTopOf="@+id/button5"
