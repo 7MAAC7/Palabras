@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
-    Button button,button6,OP_juga;
+    Button button,button6,OPjuga ;
     EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         editText = (EditText) findViewById(R.id.Nombre);
         button6 = (Button) findViewById(R.id.button6);
-        OP_juga = (Button) findViewById(R.id.OP_jugador)
+        OPjuga = (Button) findViewById(R.id.OP_jugador);
         button.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick( View view){
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     });
-        OP_juga.setOnClickListener(new View.OnClickListener() {
+        OPjuga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,Opciones_de_jugador.class);
