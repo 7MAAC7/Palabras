@@ -47,6 +47,7 @@
         android:background="#FFFFFF"
         android:ems="4"
         android:maxEms="4"
+        android:focusable="true"
         android:singleLine="true"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"

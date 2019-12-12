@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick( View view){
             enviar();
-            Ingresar_Jugador();
+
         }
 
 
@@ -50,20 +50,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 }
+
     public void enviar(){
-        Intent i = new Intent(MainActivity.this,activity_2.class);
-        i.putExtra("valor",editText.getText().toString());
-        startActivity(i);
+
+        if(editText.getText().toString().toUpperCase().equals("")){
+            Toast.makeText(this, "Debe introducir Un Nombre", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent i = new Intent(MainActivity.this,activity_2.class);
+            i.putExtra("valor",editText.getText().toString());
+            startActivity(i);
+        }
     }
     public void Ingresar_Jugador(){
         Conexion Jugador = new Conexion(this, "Jugadores", null, 1);
 
         SQLiteDatabase BD = Jugador.getReadableDatabase();
-        String JUG = this.editText.getText().toString();
-        ContentValues Ingreso = new ContentValues();
-        Ingreso.put("Nombre_Jugador",JUG);
-        BD.insert("Jugadores", null, Ingreso);
-        BD.close();
+        try {
+            String JUG = this.editText.getText().toString();
+            ContentValues Ingreso = new ContentValues();
+            Ingreso.put("Nombre_Jugador", JUG);
+            BD.insert("Jugadores", null, Ingreso);
+        }
+        catch (Exception e){
+            Toast t = Toast.makeText(MainActivity.this, "ERROR", Toast.LENGTH_SHORT);
+        }
+        finally {
+            BD.close();
+        }
 
     }
 
