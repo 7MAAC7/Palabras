@@ -1,4 +1,4 @@
-package com.example.palabras;
+package com.ProyectoPalabras.palabras;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

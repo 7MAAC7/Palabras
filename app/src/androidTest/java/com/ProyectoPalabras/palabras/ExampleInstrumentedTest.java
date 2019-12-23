@@ -1,4 +1,4 @@
-package com.example.palabras;
+package com.ProyectoPalabras.palabras;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.palabras", appContext.getPackageName());
+        assertEquals("com.ProyectoPalabras.palabras", appContext.getPackageName());
     }
 }
